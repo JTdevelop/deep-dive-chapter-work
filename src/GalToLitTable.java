@@ -7,7 +7,7 @@
  public class GalToLitTable {
 
   public static void main(String args[]) {
-    double gallons, liters;
+    double gallons, liters, inches, meters;
     int counter;
 
     counter = 0;
@@ -20,6 +20,19 @@
       if (counter == 10) {
         System.out.println();
         counter = 0; // reset the line counter
+      }
+    }
+
+    counter = 0;
+    for (inches = 1; inches <= 144; inches++) {
+      meters = inches / 39.37; // convert to meters
+      System.out.println(inches + " inches is " + meters + " meters.");
+
+      counter++;
+      //ever 12 inches, print a blank line
+      if (counter ==12) {
+        System.out.println();
+        counter = 0; // reset the line counter.
       }
     }
   }
